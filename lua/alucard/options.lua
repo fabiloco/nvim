@@ -47,3 +47,12 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
+-- romper lineas visualmente en markdown
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "markdown",
+	callback = function()
+		vim.opt_local.wrap = true
+		vim.opt_local.linebreak = true
+	end,
+})
+

@@ -25,10 +25,8 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    -- tus plugins van aquí directamente
     { "ellisonleao/gruvbox.nvim" },
     { "nvim-treesitter/nvim-treesitter" },
 
@@ -64,15 +62,20 @@ require("lazy").setup({
         dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
 
-    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'}
+    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons' },
+
+    -- Sessions
+    { "rmagatti/auto-session" },
+
+    -- Git
+    { "lewis6991/gitsigns.nvim" },
+
+    -- Markdown
+    { "MeanderingProgrammer/render-markdown.nvim", dependencies = { "nvim-treesitter/nvim-treesitter" } },
+    { "preservim/vim-markdown" },
   },
   
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
   install = { colorscheme = { "gruvbox" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
-
-
-
