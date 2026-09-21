@@ -10,6 +10,7 @@ require("alucard.plugins.lsp")
 require("alucard.plugins.cmp")
 require("alucard.plugins.auto-session")
 require("alucard.plugins.gitsigns")
+require("alucard.plugins.git-blame")
 require("alucard.plugins.markdown")
 
 vim.cmd.colorscheme("gruvbox")

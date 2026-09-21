@@ -69,6 +69,7 @@ require("lazy").setup({
 
     -- Git
     { "lewis6991/gitsigns.nvim" },
+    { "f-person/git-blame.nvim" },
 
     -- Markdown
     { "MeanderingProgrammer/render-markdown.nvim", dependencies = { "nvim-treesitter/nvim-treesitter" } },
